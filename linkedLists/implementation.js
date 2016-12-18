@@ -94,7 +94,7 @@ var sll = new linkedList();
 sll.add(3);
 sll.add(4);
 // sll.add(5);
-console.log(sll.deleteIndex(1));
+console.log(sll.deleteIndex());
 
 // sll.add(6);
 // sll.add(7);

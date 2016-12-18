@@ -41,10 +41,17 @@ linkedList.prototype.searchAtNode = function(val) {
 	return currentNode;
 }
 
+linkedList.prototype.deleteFirstNode = function() {
+		this.head = this.head.next;
+		this._length--;
+		return this.head;
+}
+
 var sll = new linkedList();
 sll.add(3);
 sll.add(4);
 sll.add(5);
 sll.add(6);
 sll.add(7);
-console.log(sll.searchAtNode(6));
+console.log(sll.deleteFirstNode());
+console.log(sll._length);

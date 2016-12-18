@@ -47,11 +47,35 @@ linkedList.prototype.deleteFirstNode = function() {
 		return this.head;
 }
 
+linkedList.prototype.deleteLastNode = function() {
+		if(this._length==1){
+			this.head = this.head.next;
+			this._length--;
+			return this.head;
+		}
+		else{
+			var currentNode = this.head;
+			var previousNode = null;
+			while(currentNode.next!= null) {
+				previousNode = currentNode;
+				currentNode = currentNode.next;
+
+
+			}
+			previousNode.next = currentNode.next;
+			this._length--;
+			return this;
+		}
+		
+}
+
 var sll = new linkedList();
 sll.add(3);
 sll.add(4);
 sll.add(5);
-sll.add(6);
-sll.add(7);
-console.log(sll.deleteFirstNode());
-console.log(sll._length);
+
+// sll.add(6);
+// sll.add(7);
+// console.log(sll.deleteFirstNode());
+console.log(sll.deleteLastNode());
+// console.log(sll._length);

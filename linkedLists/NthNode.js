@@ -40,7 +40,7 @@ function getNth(node, index) {
   	node = node.next;
   	count++;
   }
-  return node.data;
+  return node
 
 }
 
